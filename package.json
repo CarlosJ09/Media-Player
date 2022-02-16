@@ -1,0 +1,25 @@
+{
+  "name": "media-player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosJ09/media-player.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Carlos Jimenez <carlos.ml.jimenezz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CarlosJ09/media-player/issues"
+  },
+  "homepage": "https://github.com/CarlosJ09/media-player#readme",
+  "dependencies": {
+    "lfs": "^0.0.4"
+  }
+}
