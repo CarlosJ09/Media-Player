@@ -60,3 +60,7 @@ button:hover {
     background-color: #008CBA;
     color: white;
 }
+a {
+    color: white;
+    text-decoration: none;
+}

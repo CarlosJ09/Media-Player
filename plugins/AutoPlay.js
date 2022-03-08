@@ -1,4 +1,5 @@
-function AutoPlay() {};
+function AutoPlay() {}
+
 
 export default AutoPlay;
 
