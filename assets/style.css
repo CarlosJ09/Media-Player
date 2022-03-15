@@ -36,7 +36,6 @@ header{
     width: 60%;
     height: 30rem;
     margin: auto;
-    margin-top: 2rem;
 }
 button{
     width: 30%;
@@ -48,7 +47,7 @@ button{
     color: white;
     padding: 16px 32px;
     text-align: center;
-     display: inline-block;
+    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     transition-duration: 0.4s;
@@ -60,3 +59,52 @@ button:hover {
     background-color: #008CBA;
     color: white;
 }
+#exButton {
+    border:lime 2px solid;
+    width: 15%;
+    font-size: 14px;
+    align-items: center;
+}
+#exButton:hover{
+    background-color:lime;
+    color: white;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.footer{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background-color:#0099CC;
+    margin-top: 10px;
+}
+.contact-me{
+    width: 50%;
+    display: grid;
+    justify-content: center;
+}
+.contact-me p{
+    color: #FFF;
+    align-self: center;
+    font-size: 1.2rem;
+    top: -5px;
+}
+.title2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 1rem;
+}
+.Social-Media{
+    width: 50%;
+    display: grid;
+    justify-content: center;
+}
+.Social-Media a{
+    color: #FFF;
+    align-self: center;
+    font-size: 1.2rem;
+}
+
