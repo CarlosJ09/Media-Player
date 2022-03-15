@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Proxy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/proxy.css">
+  </head>
+  <body>
+    <a class="link" href="/index.html"><p>Go back</p></a>
+    <div class="note-container">
+      <p class="note">
+        Note: You can stop the image request with the 'Stop Fetching' button.
+      </p>
+    </div>
+    <div class="container1">
+      <img id="huge-image"/>
+      <div class="container-buttons">
+        <button id="load" class="button">Load HUGE Image</button>
+        <button id="stop" class="button">Stop Fetching</button>
+      </div>
+    </div>
+ <!--JavaScript-->
+    <script>
+      const target = {
+        red: 'Rojo',
+        green: 'Verde',
+        blue: 'Azul',
+        yellow: 'Amarilla',
+        purple: 'Morado'
+      }
+      const handler = {
+        get(obj, prop){
+          if (prop in obj) {
+            return obj[prop]
+          }
+          const suggetion = Object.keys(obj).find(key => {
+            return Levenshtein.get(key, prop) <= 5
+          })
+
+          if(suggetion){
+            console.log(`${prop} No se encontro. Quisiste decir ${suggetion}?`)
+          }
+          return obj[prop]
+        }
+      }
+      const p = new Proxy(target, handler)
+    </script>
+    <script src="https://unpkg.com/fast-levenshtein@2.0.6/levenshtein.js"></script>
+    <script src="/excercises/fetch.js"></script>
+  </body>
+</html>
