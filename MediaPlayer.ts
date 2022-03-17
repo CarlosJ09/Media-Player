@@ -1,40 +1,43 @@
 class MediaPlayer {
-    media:HTMLMediaElement;
+    media: HTMLMediaElement;
     plugins: Array<any>;
-
-    constructor(config){
-        this.media = config.el;
-        this.plugins = config.plugins || []
-        this.initPlugins();
+  
+    constructor(config) {
+      this.media = config.el;
+      this.plugins = config.plugins || [];
+      this.initPlugins();
     }
+  
     private initPlugins() {
-        this.plugins.forEach(plugins => {
-            plugins.run(this);
-        });
+      this.plugins.forEach(plugin => {
+        plugin.run(this);
+      });
     }
-    //Play
-    play(){
-        this.media.play();
+  
+    play() {
+      this.media.play();
     }
-    //Pause
-    pause(){
-        this.media.pause();
+  
+    pause() {
+      this.media.pause();
     }
- 
-    togglePlay(){
-        if(this.media.paused){
-            this.play();
-        }else{
-            this.pause();
-        }
+  
+    togglePlay() {
+      if (this.media.paused) {
+        this.play();
+      } else {
+        this.pause();
+      }
     }
-
+  
     mute() {
-        this.media.muted = true;
+      this.media.muted = true;
     }
+  
     unmute() {
-        this.media.muted = false;
+      this.media.muted = false;
     }
-}
-
-export default MediaPlayer;
+  }
+  
+  export default MediaPlayer;
+  
