@@ -22,7 +22,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "fast-levenshtein": "^3.0.0",
-    "lfs": "^0.0.4"
+    "lfs": "^0.0.4",
+    "npm": "^8.5.4"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
